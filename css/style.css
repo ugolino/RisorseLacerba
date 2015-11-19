@@ -1,0 +1,35 @@
+html, body {
+	height: 100%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.body-back {
+    background-color: #00bfa5;
+    height: 100%;
+  }
+
+
+.logo-lacerba {
+	max-height: 150px;
+}
+
+.logo-startup {
+    font-family: 'Londrina Sketch', cursive;
+    font-size: 4em;
+}
+
+h3 {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.main {
+    height: 100%;
+}
+
+h1 {
+	font-size: 3.5em;
+}
