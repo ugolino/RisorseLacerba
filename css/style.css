@@ -8,7 +8,7 @@ body {
 
 .body-back {
     background-color: #00bfa5;
-    height: 100%;
+    min-height: 100%;
   }
 
 
