@@ -33,3 +33,11 @@ h3 {
 h1 {
 	font-size: 3.5em;
 }
+
+.header-title {
+    margin-top: 0;
+}
+
+.header-icon {
+    margin-top: 20px;
+}
