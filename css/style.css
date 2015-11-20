@@ -12,9 +12,7 @@ body {
   }
 
 
-.logo-lacerba {
-	max-height: 150px;
-}
+
 
 .logo-startup {
     font-family: 'Londrina Sketch', cursive;
@@ -22,8 +20,13 @@ body {
 }
 
 h3 {
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 0px;
+}
+
+.logo-lacerba {
+    max-height: 150px;
+    margin-top: 20px;
 }
 
 .main {
