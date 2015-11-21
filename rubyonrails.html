@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Lacerba.io | Installare Ruby on Rails</title>
+  <meta name="description" content="Guida per installare ruby on rails">
+    <link rel="shortcut icon" type="favicon.png" href="favicon.png"/>
+
+
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Londrina+Sketch|Josefin+Sans:300,600' rel='stylesheet' type='text/css'>
+
+  <script src="//load.sumome.com/" data-sumo-site-id="9c3fd105db36195fd46ea190b8857eae6b1bb081f3d7a0799f0ae11861b86529" async="async"></script>
+
+      <meta property="og:url" content="http://risorse.lacerba.io" /> 
+    <meta property="og:title" content="Risorse gratuite per StartUp" /> 
+    <meta property="og:image" content="http://risorse.lacerba.io/risorse.jpg" /> 
+    <meta property="og:description" content="Guida per installare ruby on rails su Mac, Windows e Linux" />
+</head>
+<body>
+
+<div class="navbar-fixed">
+  <nav class="blue-grey darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="http://www.lacerba.io" class="brand-logo" target="_blank">Lacerba.io</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="http://www.lacerba.io" target="_blank">Impara RubyOnRails</a></li>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="http://www.lacerba.io">Impara RubyOnRails</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+  <div class="col s12 center">
+    <i class="large material-icons header-icon">dvr</i>
+    <h1 class="header-title">Guida passo passo per installare Ruby on Rails</h1>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+          <div class="row">
+            <div class="col s12">
+              <ul class="tabs">
+                <li class="tab col s2"><a href="#apple">Apple</a></li>
+                <li class="tab col s2"><a href="#windows">Windows</a></li>
+                <li class="tab col s2"><a href="#ubuntu">Ubuntu</a></li>
+              </ul>
+            </div>
+
+            <div id="apple" class="col s12">
+              <div class="row">
+                  <h2 class="sub-header">Installa Ruby on Rails su Mac OSX</h2>
+                  <p>In questa guida andremo a vedere passo dopo passo come installare Ruby on Rails su un Mac OSX
+                    <br>
+                  <i class="material-icons">access_time</i> Il processo per intero richiederà circa 30 minuti</p>
+                  
+                  <h4 class="sub-title">Verificare che XCode sia installato</h4>
+                  <hr>
+                  <p>Per installare XCode è sufficiente andare sull'Apple Store, cercare l'ultima versione di XCode, scaricarla ed installarla.</p>
+
+                  <h4 class="sub-title">Installare HomeBrew</h4>
+                  <hr>
+                  <p>Aprire il terminale, copiare ed eseguire il seguente comando</p>
+<pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
+                  <p>Controllare che HomeBrew sia installato correttamente digitando sul terminal il seguente comando</p>
+<pre><code>brew -v
+brew doctor
+</code></pre>
+                  <h4 class="sub-title">Installare Ruby 2.2.3</h4>
+                  <hr>
+                  <p>Eseguire i seguenti comandi nel terminale per installare Ruby 2.2.3 </p>
+<pre><code>brew install rbenv ruby-build</code></pre>
+
+<pre><code>echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile</code></pre>
+
+<pre><code>rbenv install 2.2.3
+rbenv global 2.2.3
+ruby -v</code></pre>
+
+                  <h4 class="sub-title">Installare e Configurare Git</h4>
+                  <hr>
+                  <p>Git è un version control system che ci permette di tenere traccia dei nostri codici.<br>
+                  Installare git copiando il seguente comando nel terminal</p>
+
+<pre><code>brew install git </code></pre>
+
+                  <p>Una volta installato Git è consigliato creare un account GitHub gratuitamente in modo da poter salvare i codici online<br>
+                  E' possibile impostare un account GitHub online <a href="http://github.com" target="_blank">seguendo questo link</a> e ricordatevi le credenziali di accesso.<br>
+                  Una volta creato l'account GitHub tornate al terminal e copiate i seguenti comandi sostituendo i valori tra parentesi con le vostre credenziali GitHub</p>
+
+<pre><code>git config --global color.ui true</code></pre>
+<pre><code>git config --global user.name "IL TUO USERNAME"</code></pre>
+<pre><code>git config --global user.email "LATUAEMAIL@EMAIL.COM"</code></pre>
+<pre><code>ssh-keygen -t rsa -C "LATUAEMAIL@EMAIL.COM"</code></pre>
+
+            <p>inserire il seguente comando nel terminal e copiare il codice che ci viene generato nella sezione SSH Key disponibile su <a href="https://github.com/settings/ssh">questo link</a>
+
+<pre><code>cat ~/.ssh/id_rsa.pub</code></pre>
+
+            <p>Una volta inserito è possibile testare se funziona inserendo questo comando nel terminal</p>
+
+<pre><code>ssh -T git@github.com</code></pre>
+
+            <p>Se git è configurato correttamente dovrete ricevere il seguente messaggio</p>
+
+<pre><code>Hi! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+
+              <h4 class="sub-title">Installare Rails 4.2.4</h4>
+              <hr>
+
+              <p>Per installare Rails basta semplicemente copiare questo comando nel terminal</p>
+
+<pre><code>gem install rails -v 4.2.4</code></pre>
+
+              <p>Questo processo richiederà un po di tempo. Una volta completata con l'installazione digitate il seguente comando nel terminal</p>
+
+<pre><code>rbenv rehash</code></pre>
+
+              <p>Ora possiamo verificare se rails è installato correttamente copiando il seguente comando nel terminal</p>
+
+<pre><code>rails -v</code></pre>
+  
+             <p>Se rail è installato correttamente dovrete ricevere questo messaggio</p>
+
+<pre><code># Rails 4.2.4</code></pre>
+
+
+              </div>
+            </div>
+
+            <div id="windows" class="col s12">
+              <div class="row">
+                <div class="col s12 m4">
+                  <div class="card deep-orange darken-3 hoverable">
+                    <a href="https://www.wevideo.com/" target="_blank">
+                      <div class="card-content white-text">
+                        <span class="card-title">WeVideo</span>
+                        <p>Semplice e intuitivo. Ideale per creare video collaborativi.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m4">
+                  <div class="card deep-orange darken-3 hoverable">
+                    <a href="http://www.loopster.com/" target="_blank">
+                      <div class="card-content white-text">
+                        <span class="card-title">Loopster</span>
+                        <p>Permette l'editing con un'interffaccia molto intutiva e semplice.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="ubuntu" class="col s12">
+              <div class="row">
+                <div class="col s12 m4">
+                  <div class="card teal darken-1 hoverable">
+                    <a href="http://www.bbsoftware.co.uk/BBFlashBack_FreePlayer.aspx" target="_blank">
+                      <div class="card-content white-text">
+                        <span class="card-title">BBsoftware</span>
+                        <p>WINDOWS. Permette di registrare anche la webcam in contemporanea allo schermo.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m4">
+                  <div class="card teal darken-1 hoverable">
+                    <a href="http://camstudio.org/" target="_blank">
+                      <div class="card-content white-text">
+                        <span class="card-title">CamStudio</span>
+                        <p>WINDOWS. Diverse opzioni di registrazione: annotazioni, audio e pezzi di schermo.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m4">
+                  <div class="card teal darken-1 hoverable">
+                    <a href="https://www.techsmith.com/jing.html" target="_blank">
+                      <div class="card-content white-text">
+                        <span class="card-title">Jing</span>
+                        <p>MAC. Permtte di registrare anche l'audio e fare post-editing dell'immagine.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m4">
+                  <div class="card teal darken-1 hoverable">
+                    <a href="https://support.apple.com/it-it/HT201066" target="_blank">
+                      <div class="card-content white-text">
+                        <span class="card-title">QuickTime</span>
+                        <p>MAC. Servizio già integrato, ma non permette di registrare audio e video contemporaneamente.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large teal accent-4" href="index.html">
+      <i class="large material-icons">home</i>
+    </a>
+  </div>
+
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62726748-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
