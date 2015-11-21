@@ -78,14 +78,16 @@
 <pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
                   <p>Controllare che HomeBrew sia installato correttamente digitando sul terminal il seguente comando</p>
 <pre><code>brew -v
+brew update
 brew doctor
 </code></pre>
                   <h4 class="sub-title">Installare Ruby 2.2.3</h4>
                   <hr>
                   <p>Eseguire i seguenti comandi nel terminale per installare Ruby 2.2.3 </p>
-<pre><code>brew install rbenv ruby-build</code></pre>
+<pre><code>brew install rbenv rbenv-gem-rehash ruby-build</code></pre>
 
-<pre><code>echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile 
+<pre><code>echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile</code></pre>
 
 <pre><code>rbenv install 2.2.3
