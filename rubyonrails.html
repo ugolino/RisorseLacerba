@@ -124,22 +124,8 @@ ruby -v</code></pre>
                   E' possibile impostare un account GitHub online <a href="http://github.com" target="_blank">seguendo questo link</a> e ricordatevi le credenziali di accesso.<br>
                   Una volta creato l'account GitHub tornate al terminal e copiate i seguenti comandi sostituendo i valori tra parentesi con le vostre credenziali GitHub</p>
 
-<pre><code>git config --global color.ui true</code></pre>
 <pre><code>git config --global user.name "IL TUO USERNAME"</code></pre>
 <pre><code>git config --global user.email "LATUAEMAIL@EMAIL.COM"</code></pre>
-<pre><code>ssh-keygen -t rsa -C "LATUAEMAIL@EMAIL.COM"</code></pre>
-
-            <p>inserire il seguente comando nel terminal e copiare il codice che ci viene generato nella sezione SSH Key disponibile su <a href="https://github.com/settings/ssh">questo link</a>
-
-<pre><code>cat ~/.ssh/id_rsa.pub</code></pre>
-
-            <p>Una volta inserito è possibile testare se funziona inserendo questo comando nel terminal</p>
-
-<pre><code>ssh -T git@github.com</code></pre>
-
-            <p>Se git è configurato correttamente dovrete ricevere il seguente messaggio</p>
-
-<pre><code>Hi! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
 
 
               </div>
